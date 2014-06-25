@@ -4,24 +4,40 @@
 
 [![spm version](http://spmjs.io/badge/loader)](http://spmjs.io/package/loader)
 
-An awesome spm package!
+简单的加载提示
 
 ---
 
-## Install
-
-```
-$ spm install loader --save
-```
 
 ## Usage
 
 ```js
 var loader = require('loader');
-// use loader
+new loader({
+   target:'#loader-box',
+   number: 4,
+   speed: 100
+}).show();
 ```
 
-## Api
+## 选项
 
-Here is more details.
+### target
+目标容器
+
+### number
+加载bar的数量
+
+### speed
+速度，单位为ms
+
+## 方法
+
+### show
+显示加载条
+
+### hide
+隐藏加载条
+
+
 

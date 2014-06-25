@@ -12,18 +12,18 @@ function loader(option) {
             height: '4px',
             backgroundColor: '#CCC',
             activeBackgroundColor: '#EA578C'
-        },
+        }
+    };
+    $.extend(o, option);
+    var barsHtml = new Array(o.number).join('<i></i>');
+    this.overlay = new Overlay({
+        template: '<span class="mk-loading"><i class="mk-loading-active"></i>' + barsHtml + '</span>',
+        align: o.align,
         align: {
             selfXY: ['50%', '50%'],
             baseElement: option.target,
             baseXY: ['50%', '50%']
         }
-    }
-    $.extend(o, option);
-    var barsHtml = new Array(o.number).join('<i></i>');
-    this.overlay = new Overlay({
-        template: '<span class="mk-loading"><i class="mk-loading-active"></i>' + barsHtml + '</span>',
-        align: o.align
     });
 
     var $loading = this.overlay.element;
