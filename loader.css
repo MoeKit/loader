@@ -1,0 +1,17 @@
+.mk-loading {
+    display:inline-block;
+    vertical-align:middle;
+}
+.mk-loading i {
+    width: 8px;
+    height: 4px;
+    display: inline-block;
+    float: left;
+    background-color: #ccc;
+    margin-right: 2px;
+    -webkit-transition: all 100ms linear;
+}
+
+.mk-loading i.mk-loading-active {
+    background-color: #EA578C;
+}
