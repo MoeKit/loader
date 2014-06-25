@@ -3,6 +3,8 @@
 ---
 
 [![spm version](http://spmjs.io/badge/loader)](http://spmjs.io/package/loader)
+[![Build Status](https://travis-ci.org/MoeKit/loader.svg?branch=master)](https://travis-ci.org/MoeKit/loader)
+[![Coverage Status](https://coveralls.io/repos/MoeKit/loader/badge.png)](https://coveralls.io/r/MoeKit/loader)
 
 简单的加载提示
 
