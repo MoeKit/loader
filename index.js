@@ -1,19 +1,19 @@
-var $ = require('jquery');
-var Overlay = require('arale-overlay');
+var $ = require('jquery'),
+    Overlay = require('arale-overlay');
 
 function loader(option) {
     require('./loader.css');
-    var _this = this;
-    var o = {
-        number: 4,//bars numbers
-        speed: 100,
-        style: {
-            width: '8px',
-            height: '4px',
-            backgroundColor: '#CCC',
-            activeBackgroundColor: '#EA578C'
-        }
-    };
+    var _this = this,
+        o = {
+            number: 4,//bars numbers
+            speed: 100,
+            style: {
+                width: '8px',
+                height: '4px',
+                backgroundColor: '#CCC',
+                activeBackgroundColor: '#EA578C'
+            }
+        };
     $.extend(o, option);
     var barsHtml = new Array(o.number).join('<i></i>');
     this.overlay = new Overlay({
@@ -26,13 +26,13 @@ function loader(option) {
         }
     });
 
-    var $loading = this.overlay.element;
-    var $items = $loading.find('i');
-    var length = $items.length;
+    var $loading = this.overlay.element,
+        $items = $loading.find('i'),
+        length = $items.length;
     var playInterval = setInterval(function () {
-        var $active = $loading.find('.mk-loading-active');
-        var thisone = $active.index() + 1;
-        var lastone = thisone - 1;
+        var $active = $loading.find('.mk-loading-active'),
+            thisone = $active.index() + 1,
+            lastone = thisone - 1;
         if (thisone === 0) {
             thisone = 0;
             lastone = length - 1;
@@ -43,10 +43,12 @@ function loader(option) {
 
 loader.prototype.show = function () {
     this.overlay.show();
+    return this;
 };
 
 loader.prototype.hide = function () {
     this.overlay.hide();
+    return this;
 }
 
 module.exports = loader;
