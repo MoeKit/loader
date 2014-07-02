@@ -33,6 +33,12 @@ new loader({
 ### speed
 速度，单位为ms
 
+### style.width
+单个bar宽度
+
+### style.height
+单个bar高度
+
 ## 方法
 
 ### show

@@ -49,6 +49,25 @@ seajs.use('index', function(loader) {
 });
 ````
 
+## 速度设定
+
+````html
+<div style="border:1px dashed #ececec;width:200px;height:100px;" id="loader-box-6"></div>
+````
+
+````javascript
+seajs.use('index', function(loader) {
+    new loader({
+        target:'#loader-box-6',
+        number:8,
+        speed: 300,
+        style: {
+            width: '15px'
+        }
+    }).show();
+});
+````
+
 ## 高度设定
 
 ````html
