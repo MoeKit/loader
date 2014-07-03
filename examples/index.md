@@ -16,6 +16,21 @@ seajs.use('index', function(loader) {
 });
 ````
 
+## 按钮上使用
+
+````html
+<button style="width:100px;height:30px;" id="loader-button" disabled></button>
+````
+
+````javascript
+seajs.use('index', function(loader) {
+    new loader({
+        target:'#loader-button',
+        number: 5
+    }).show();
+});
+````
+
 ## 个数设定
 
 ````html
