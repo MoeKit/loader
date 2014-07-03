@@ -5,7 +5,8 @@
 .mk-loading i {
     width: 8px;
     height: 4px;
-    display: inline-block;
+    font-size:1px; // fix ie6 height
+    display:block;
     float: left;
     background-color: #ccc;
     margin-right: 2px;
